@@ -1,0 +1,438 @@
+:root {
+    --background-color: #b0c4de;
+    --text-color: #f0f8ff;
+    --ground-color: #333333;
+    --slider-color: #85cdfa;
+    --form-color: #778899;
+}
+
+body {
+    font-family: "Big Shoulders Inline", sans-serif;
+    scroll-behavior: smooth;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto;
+}
+header {
+    background-color: var(--ground-color);
+    position: relative;
+}
+header .headertitle h1 {
+    color: var(--text-color);
+    font-size: 10rem;
+    text-align: center;
+    margin: 1rem;
+    position: absolute;
+    top: 25%;
+    left: 0;
+    opacity: 2;
+}
+
+header .headertitle h2 {
+    color: var(--text-color);
+    font-size: 5rem;
+    text-align: center;
+    margin-top: 4rem;
+    position: absolute;
+    top: 40%;
+    left: 20%;
+    opacity: 2;
+}
+
+/* アニメーションのラッパー */
+header .headertitle .text-wrap {
+    overflow: hidden;
+}
+
+/* アニメーションするテキスト */
+header .headertitle h1,
+header .headertitle h2 {
+    transform: translateY(100%);
+    animation: slideUp 1s ease-out forwards;
+    opacity: 0;
+}
+
+/* h2 は 0.5秒遅れて開始 */
+header .headertitle h2 {
+    animation-delay: 0.5s;
+}
+
+/* 下から上へフェードイン＋スライド */
+@keyframes slideUp {
+    0% {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0%);
+        opacity: 1;
+    }
+}
+
+/* 背景動画の調整（既存のままでOK） */
+header .headermovie video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    overflow: hidden;
+    z-index: 1;
+    opacity: 0.6;
+}
+
+@keyframes bg {
+    0% {
+        opacity: 0;
+        transform: scaleX(0) translateX(-5%);
+    }
+    30% {
+        transform: scaleX(1) translateX(0);
+    }
+    100% {
+        transform: scaleX(1) translateX(0);
+    }
+    30%,
+    100% {
+        opacity: 1;
+    }
+}
+
+#scroll-banner {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 500px;
+    display: none;
+    z-index: 1000;
+}
+
+.scroll-banner-box {
+    position: relative;
+    z-index: 1000;
+}
+.close-btn {
+    width: 50px;
+    height: 50px;
+    position: fixed;
+    top: 10%;
+    right: 0;
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+}
+
+header ul {
+    color: var(--text-color);
+    display: flex;
+    justify-content: space-evenly;
+    transition: all 0.5s linear;
+}
+
+header nav ul li {
+    letter-spacing: 0.4rem;
+}
+
+.active {
+    object-fit: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-top: 700px;
+    transition: all 0.5s linear;
+    display: none;
+}
+.swiper {
+    width: 90%;
+    /* 画面幅に応じて高さを固定にしたい時 */
+    aspect-ratio: 16/9;
+}
+.swiper-slide {
+    background-color: #4682b4;
+}
+.swiper-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.swiper-button-prev,
+.swiper-button-next {
+    color: var(--ground-color);
+}
+/* .swiper-pagination {
+    color: var(--ground-color);
+} */
+.swiper-scrollbar {
+    color: var(--ground-color);
+}
+
+#sec01 h2 img {
+    max-width: 550px;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -100%);
+    z-index: 10000;
+}
+
+#sec01 .bannerbutton img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10000;
+}
+
+#sec01 div.active,
+#sec01box div.active {
+    display: block;
+}
+.button01 {
+    max-width: 300px;
+    padding: 2rem;
+    text-align: center;
+    background-color: black;
+    color: var(--text-color);
+    cursor: pointer;
+}
+h2 {
+    font-size: 3rem;
+    text-align: center;
+    padding: 2rem;
+    letter-spacing: 0.4rem;
+}
+
+#sec08 {
+    color: var(--text-color);
+    font-size: 3rem;
+    text-align: center;
+    padding: 2rem;
+}
+
+#sec02 {
+    text-align: center;
+    margin: 0 auto;
+}
+
+#sec02 img {
+    max-width: 200px;
+}
+
+#sec02 .sec02box {
+    font-family: "Kosugi Maru", sans-serif;
+    font-size: 400;
+    padding-bottom: 2rem;
+}
+
+#sec02 .sec02box p {
+    text-decoration: underline var(--text-color);
+    font-size: 2rem;
+    padding: 2rem;
+}
+
+.images01,
+.images02,
+.images03 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.images04 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.image-grid01,
+.image-grid03 {
+    flex-basis: calc((100% / 3) - (3rem / 3));
+    border-radius: 120px 0 120px 0;
+    overflow: hidden;
+}
+
+.image-grid02,
+.image-grid04 {
+    flex-basis: calc((100% / 3) - (3rem / 3));
+    border-radius: 0 160px 0 160px;
+    overflow: hidden;
+}
+
+.image-grid01 img,
+.image-grid02 img,
+.image-grid04 img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.image-grid02,
+.image-grid03,
+.image-grid04 {
+    max-height: 500px;
+}
+
+.swiper {
+    margin-bottom: 2rem;
+}
+
+#sec08 p {
+    color: var(--text-color);
+    font-size: 1rem;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+#sec08 h3,
+#sec08 p {
+    letter-spacing: 0.4rem;
+}
+
+#sec08 img {
+    width: 1.5rem;
+}
+
+footer {
+    font-family: "Big Shoulders Inline", sans-serif;
+    font-size: 2rem;
+    background-color: var(--ground-color);
+    color: var(--text-color);
+    padding: 2rem;
+    text-align: center;
+}
+
+.loader {
+    font-weight: bold;
+    font-family: monospace;
+    font-size: 30px;
+    display: inline-grid;
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10000;
+    transition: all 5s linear;
+    background-color: var(--background-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--text-color);
+}
+.loader:before,
+.loader:after {
+    content: "Loading...";
+    grid-area: 1/1;
+    line-height: 1em;
+    --webkit-mask: linear-gradient(90deg, #000 50%, #0000 0) 0 50%/2ch 100%;
+    --webkit-mask-position: calc(var(--s, 0) * 1ch) 50%;
+    animation: l30 3s infinite;
+}
+.loader:after {
+    --s: -1;
+}
+
+.loading {
+    opacity: 0;
+    visibility: hidden;
+}
+
+@keyframes l30 {
+    33% {
+        transform: translateY(calc(var(--s, 1) * 50%));
+        -webkit-mask-position: calc(var(--s, 0) * 1ch) 50%;
+    }
+    66% {
+        transform: translateY(calc(var(--s, 1) * 50%));
+        -webkit-mask-position: calc(var(--s, 0) * 1ch + 1ch) 50%;
+    }
+    100% {
+        transform: translateY(calc(var(--s, 1) * 0%));
+        -webkit-mask-position: calc(var(--s, 0) * 1ch + 1ch) 50%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    header .headertitle .text-wrap h1 {
+        font-size: 5rem;
+    }
+    header .headertitle .text-wrap h2 {
+        font-size: 2rem;
+        margin: 3rem;
+    }
+    #sec02 .sec02box span {
+        font-size: 0.7rem;
+    }
+    #drawerbutton {
+        display: block;
+        position: fixed;
+        right: 1rem;
+        top: 1rem;
+        z-index: 10000;
+    }
+    .menu-btn {
+        width: 30px;
+        height: 30px;
+        cursor: pointer;
+    }
+    .bar {
+        width: 100%;
+        height: 5px;
+        background-color: var(--text-color);
+        transition: 0.3s;
+        margin-bottom: 7px;
+    }
+    #drawerbutton.redesign .bar:nth-child(1) {
+        transform: translateY(12px) rotate(45deg);
+    }
+    #drawerbutton.redesign .bar:nth-child(2) {
+        opacity: 0;
+    }
+    #drawerbutton.redesign .bar:nth-child(3) {
+        transform: translateY(-12px) rotate(-45deg);
+    }
+    header ul {
+        width: 100%;
+        height: 100%;
+        position: fixed;
+        left: 0;
+        top: -100%;
+        background-color: rgba(68, 137, 198, 0.5);
+        color: var(--text-color);
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 3rem;
+        z-index: 1000;
+    }
+    header ul.open {
+        top: 0;
+    }
+
+    .images01,
+    .images02,
+    .images03,
+    .images04 {
+        display: flex;
+    }
+
+    .image-grid01,
+    .image-grid02,
+    .image-grid03,
+    .image-grid04 {
+        display: block;
+        flex-basis: calc((100% - 1rem) (1rem / 2));
+    }
+    .image-grid03 {
+        display: grid;
+        object-fit: cover;
+        object-position: 50% 0;
+        background-color: var(--text-color);
+    }
+    .image-grid03 img {
+        width: 100%;
+        height: 200px;
+        object-position: 50% 0;
+        object-fit: cover;
+    }
+}

@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Inline:opsz,wght@10..72,100..900&display=swap"
+            rel="stylesheet"
+        />
+        <link href="https://fonts.googleapis.com/css2?family=Kosugi+Maru&display=swap" rel="stylesheet" />
+        <link rel="stylesheet" href="css/destyle.css" />
+        <title>PORTFOLIO</title>
+        <link rel="stylesheet" href="css/style.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+        <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet" />
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+        <link rel="stylesheet" href="css/style.css" />
+        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    </head>
+    <body>
+        <div class="loader"></div>
+        <header>
+            <div class="headertitle">
+                <div class="text-wrap"><h1>PORTFOLIO</h1></div>
+                <div class="text-wrap"><h2>ayaka hosoi</h2></div>
+            </div>
+            <div class="headermovie">
+                <video src="videos/headermovies.mp4" muted autoplay></video>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="http://127.0.0.1:5500/index.html#sec03">LOGO</a></li>
+                    <li><a href="http://127.0.0.1:5500/index.html#sec04">BANNER</a></li>
+                    <li><a href="http://127.0.0.1:5500/index.html#sec05">LANDING PAGE</a></li>
+                    <li><a href="http://127.0.0.1:5500/index.html#sec06">FLYER</a></li>
+                    <li><a href="http://127.0.0.1:5500/index.html#sec07">CONTACT</a></li>
+                </ul>
+            </nav>
+
+            <button id="drawerbutton" class="menu-btn">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </button>
+        </header>
+
+        <main>
+            <style>
+                html,
+                body {
+                    height: 3000px; /* スクロール可能な高さ */
+                    margin: 0;
+                    transition: background 0.5s linear;
+                }
+                body {
+                    background: linear-gradient(to bottom, #e0f7fa, #ffffff); /* 初期値 */
+                }
+            </style>
+            <section id="scroll-banner">
+                <div class="scroll-banner-box">
+                    <img src="images/portfolio_banner_sweets2.jpg" alt="スクロール画像" />
+                    <span class="close-btn">
+                        <img src="images/close_72dp_4557B5_FILL0_wght400_GRAD0_opsz48.png" />
+                    </span>
+                </div>
+            </section>
+            <section id="sec02" class="animate__animated animate__fadeInRight">
+                <h2>PROFILE</h2>
+                <div class="sec02box">
+                    <img src="images/IMG_6808.png" alt="プロフィール画像" />
+                    <p>細井彩加</p>
+                    <span>
+                        大学卒業後、大手アパレル企業の店舗責任者および店長を3年間、<br />
+                        その後インテリア雑貨の営業事務を3年間経験。<br />
+                        学生時代から抱いていたWEBデザインの技術を身につけたいという思いから、<br>
+                        オンラインデザインスクール・職業訓練校にてWEBデザイン、グラフィックデザインを習得中。</br>
+                        <br>
+                        素材を雰囲気を活かして、シンプルな配置をベースに、<br />
+                        アクセントや自然な色合いのWEBデザインを制作中。</span>
+                </div>
+            </section>
+            <section id="sec03" class="animate__animated animate__fadeInLeft">
+                <h2>WORKS</h2>
+                <h2 id="sec03">LOGO</h2>
+                <div class="images01">
+                    <div class="image-grid01">
+                        <img src="images/16_Hosoi_logo.png" alt="ロゴ画像1" />
+                    </div>
+                    <div class="image-grid01">
+                        <img src="images/16_Hosoi_logo02.png" alt="ロゴ画像2" />
+                    </div>
+                    <div class="image-grid01">
+                        <img src="images/16_Hosoi_logo03.png" alt="ロゴ画像3" />
+                    </div>
+                    <div class="image-grid01">
+                        <img src="images/hosoi_logo01_shopcard.png" alt="リブレショップカード" />
+                    </div>
+                    <div class="image-grid01">
+                        <img src="images/hosoi_logo02_shopbag.jpg" alt="紙袋" />
+                    </div>
+                    <div class="image-grid01">
+                        <img src="images/16_hosoi_a4_logo.png" alt="ソレイユロゴ" />
+                    </div>
+                </div>
+                <h2 id="sec04">BANNER</h2>
+                <div class="images02">
+                    <div class="image-grid02">
+                        <img src="images/portfolio_summersale2026.jpg" alt="セール青" />
+                    </div>
+                    <div class="image-grid02">
+                        <img src="images/portfolio-fashion02.png" alt="セールモノクロ" />
+                    </div>
+                    <div class="image-grid02">
+                        <img src="images/portfolio_serum.png" alt="美容液" />
+                    </div>
+                    <div class="image-grid02">
+                        <img src="images/portfolio_cafe_remaid.jpg" alt="オシャレカフェ" />
+                    </div>
+                    <div class="image-grid02">
+                        <img src="images/portfolio_summersale2.png" alt="サマーセール画像" />
+                    </div>
+                    <div class="image-grid02">
+                        <img src="images/stationerybanner01.png" alt="サマーセール画像青いの" />
+                    </div>
+                </div>
+                <h2 id="sec05">LANDING PAGE</h2>
+                <div class="images03">
+                    <div class="image-grid03">
+                        <img src="images/preview.studio.site_live_01.png" alt="革小物バナー" />
+                    </div>
+                    <div class="image-grid03">
+                        <img src="images/rubyryokou-kyototravel.studio.site_ (1).png" alt="京都旅行バナー" />
+                    </div>
+                    <div class="image-grid03">
+                        <img src="images/preview.studio.site_live_bread02.png" alt="パン屋のバナー2" />
+                    </div>
+                </div>
+                <h2 id="sec06">FLYER</h2>
+                <div class="images04">
+                    <div class="image-grid04">
+                        <img src="images/stationerybanner02.png" alt="カフェチラシ02" />
+                    </div>
+                    <div class="image-grid04">
+                        <img src="images/hosoi_a4cafe_01-01.png" alt="カフェチラシ" />
+                    </div>
+                    <div class="image-grid04"><img src="images/portfolio_museum.jpg" alt="美術館チラシ" /></div>
+                </div>
+                <h2 id="sec07">INSPIRATION</h2>
+                <div class="swiper">
+                    <!-- Additional required wrapper -->
+                    <div class="swiper-wrapper">
+                        <!-- Slides -->
+                        <div class="swiper-slide">
+                            <img src="images/inspiration-1.png" />
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="images/inspiration-2.png" />
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="images/inspiration-3.png" />
+                        </div>
+                    </div>
+                    <!-- If we need navigation buttons -->
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
+
+                    <!-- If we need scrollbar -->
+                    <div class="swiper-scrollbar"></div>
+                </div>
+            </section>
+
+            <section id="sec01">
+                <div class="bannerimage">
+                    <h2>
+                        <span><img src="images/valentinesgiftrosesbanner.jpg" /></span>
+                    </h2>
+                </div>
+            </section>
+            <button class="button01">
+                <div class="sec01box">
+                    <span>CLICK</span>
+                </div>
+            </button>
+            <section id="sec08">
+                <h3 id="sec08">CONTACT</h3>
+                <p>
+                    <img src="images/instagram_icon.png">
+                    @angela1107aya
+                </p>
+                <p>
+                    <img src="images/mail_icon.png">
+                    reisyberah.1107@gmail.com
+                </p>
+            </section>
+        </main>
+        <script src="js/script.js"></script>
+    </body>
+
+    <footer>&copy;2025 Ayaka Hosoi</footer>
+</html>
